@@ -12,7 +12,7 @@ Then, go into the directory
 ```
 cd BatteryDaemon
 ```
-Finally, launch the install script
+Finally, launch the install script (if you don't put sudo, everything will break!)
 ```
 sudo ./installScript
 ```
