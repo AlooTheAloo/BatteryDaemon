@@ -11,17 +11,29 @@
 #include <stdlib.h>
 
 int main(void) {
+    
+   
 
     /* The Big Loop */
     while (1) {
+        printf("Hello world!!");
+        
         FILE *file;
-        if ((file) = fopen("/home/aloothealoo/projects/batteryDaemon/override.txt", "r")) 
+        char cwd[4352]; //4096 (max file path) + 255 (max file name len) + 1 (Terminating character)
+        if (getcwd(cwd, sizeof(cwd)) == NULL) {
+            break;
+        }
+        char filepath[4500];
+        sprintf(filepath, "%s/override.txt", cwd);
+        if ((file) = fopen(filepath, "r")) 
         {
-
-            sleep(60);
+            printf("overriden!");
             //override file exists, we must skip this iteration the loop
+            sleep(1);
             continue;
         }
+        printf("was looking for %s", filepath);
+        printf("not overriden!");
         //Get the time
         time_t rawtime;
         struct tm * timeinfo; 
@@ -51,7 +63,7 @@ int main(void) {
         else{
             system("asusctl -c 80");
         }
-        sleep(60); /* wait 60 seconds */
+        sleep(1); /* wait 60 seconds */
     }
    exit(EXIT_SUCCESS);
 }

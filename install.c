@@ -27,13 +27,10 @@ int main(){
     char username[1000];
     getlogin_r(username, 1000);
     //Aliases
-    char command[6000];
-    sprintf(command, "sudo echo \\#Battery-daemon commands >> /home/%s/.bashrc", username);
-    system(command);
-    sprintf(command, "sudo echo alias battery-daemon-override='touch %s/override.txt; echo Daemon overriden' >> /home/%s/.bashrc", cwd, username);
-    system(command);
-    sprintf(command, "sudo echo alias battery-daemon-stop-override='rm %s/override.txt; echo Daemon started' >> /home/%s/.bashrc", cwd, username);
-    system(command);    
- 
-
+    char path [4500];
+    sprintf(path, "/home/%s/.bashrc", username);
+    FILE* file;
+    file = fopen(path, "aw");
+    fprintf(file, "alias battery-daemon-override='touch %s/override.txt; echo Daemon overriden'\n", cwd);
+    fprintf(file, "alias battery-daemon-stop-override='rm %s/override.txt; echo Daemon overriden'\n", cwd);
 }
