@@ -59,3 +59,5 @@ Finally, recompile the script.
 ```
 gcc -Wall batteryDaemon.c -o battery-daemon
 ```
+
+I might make way to modify it automatically but idk
