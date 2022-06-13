@@ -33,7 +33,7 @@ Finally, launch the install script (if you don't put sudo, everything will break
 ```
 sudo ./installScript
 ```
-note : You will need to restart your system for the aliases to work!
+#### Note : You will need to restart your system for the aliases to work!
 
 ### TLDR
 ```
