@@ -16,4 +16,9 @@ Finally, launch the install script
 ```
 sudo ./installScript
 ```
-
+### TLDR
+```
+git clone https://github.com/AlooTheAloo/BatteryDaemon
+cd BatteryDaemon
+sudo ./installScript
+```
