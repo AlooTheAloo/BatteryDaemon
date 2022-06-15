@@ -58,8 +58,9 @@ else{
 }
 ```
 Finally, recompile the script.
+#### If you already installed the script, it will automatically update, no need to run the install script again
 ```
 gcc -Wall batteryDaemon.c -o battery-daemon
 ```
 
-I might make way to modify it automatically but idk
+I might make a way to modify it automatically but idk
