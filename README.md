@@ -6,7 +6,7 @@ Dynamically changes max charge for asus laptops on linux
 ## What does this do?
 This changes your battery dynamically to preserve battery health.
 By default, from 7 AM to 6 PM your battery is limited to 80 (standard battery max for good battery health)
-But during the night, you probably don't need your laptop to be fully charged (having it at 80 all the time is optimal)
+But during the night, you probably don't need your laptop to be fully charged (having it at 80 all the time is not optimal)
 so it dials down your laptop's battery maximum to 50.
 
 If you want to stop this daemon temporarily, the commands
