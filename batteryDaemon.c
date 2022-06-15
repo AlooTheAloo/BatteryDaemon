@@ -63,7 +63,7 @@ int main(void) {
         else{
             system("asusctl -c 80");
         }
-        sleep(1); /* wait 60 seconds */
+        sleep(60); /* wait 60 seconds */
     }
    exit(EXIT_SUCCESS);
 }
